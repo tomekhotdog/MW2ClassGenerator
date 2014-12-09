@@ -1,5 +1,7 @@
 package com.example.tomasz.mw2classgenerator.Loadouts;
 
+import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutItem;
+
 public class Loadout {
 
     private PrimaryWeapon primaryWeapon;
