@@ -1,8 +1,8 @@
 package com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements;
 
-import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutItem;
+import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutItemInterface;
 
-public class Perk implements LoadoutItem {
+public class Perk extends LoadoutElement implements LoadoutItemInterface {
     String name;
     int imageResource;
     int levelUnlocked;
@@ -17,5 +17,9 @@ public class Perk implements LoadoutItem {
 
     public int getImageResource() {
         return imageResource;
+    }
+
+    public int getLevelUnlocked() {
+        return levelUnlocked;
     }
 }
