@@ -16,7 +16,7 @@
         android:id="@+id/title"
         style="@style/MajorTitle"
         android:background="@color/bluegrey_800"
-        android:text="@string/app_name"/>
+        android:text="@string/random_loadout"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -282,7 +282,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/special"
+                android:lines="2"
                 android:textSize="@dimen/minor_text"
+                android:gravity="center"
                 android:padding="@dimen/small_padding"/>
 
             <TextView
@@ -313,6 +315,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/special"
+                android:lines="2"
+                android:gravity="center"
                 android:textSize="@dimen/minor_text"
                 android:padding="@dimen/small_padding"/>
 
@@ -344,7 +348,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/special"
+                android:lines="2"
                 android:textSize="@dimen/minor_text"
+                android:gravity="center"
                 android:padding="@dimen/small_padding"/>
 
             <TextView
@@ -357,6 +363,14 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MajorTitle"
+        android:text="@string/randomise"
+        android:layout_margin="@dimen/normal_padding"
+        android:onClick="randomise"/>
 
 </LinearLayout>
 

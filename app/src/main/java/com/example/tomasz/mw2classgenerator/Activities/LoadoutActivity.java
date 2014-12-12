@@ -59,6 +59,11 @@ public class LoadoutActivity extends Activity {
 
     }
 
+    public void randomise(View v) {
+        loadout.randomise();
+        applyLoadout();
+    }
+
     private void getViews() {
         primaryText = (TextView) findViewById(R.id.primary_weapon);
         secondaryText = (TextView) findViewById(R.id.secondary_weapon);

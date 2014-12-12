@@ -62,4 +62,14 @@ public class WeaponStoreLogic extends TestCase {
         assertNotNull(s1);
     }
 
+    public void testDistinctNumbers() {
+        WeaponStore ws = new WeaponStore(70);
+        for(int i = 0; i < 100; i++) {
+            int[] ns = ws.getDistinctNumbers(3, 15);
+
+            assert(ns[0] != ns[1] && ns[1] != ns[2] && ns[0] != ns[2]);
+        }
+
+    }
+
 }

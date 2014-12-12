@@ -21,4 +21,6 @@
     <string name="deathstreak">Deathstreak</string>
     <string name="perks">Perks</string>
     <string name="killstreaks">Killstreaks</string>
+
+    <string name="randomise">Randomise</string>
 </resources>

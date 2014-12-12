@@ -111,12 +111,13 @@ public class WeaponStore {
         return item;
     }
 
-    private int[] getDistinctNumbers(int distinct, int max) {
+    public int[] getDistinctNumbers(int distinct, int max) {
         int[] selections = new int[distinct];
         for(int i = 0; i < distinct; i++) {
             int selection;
-            boolean safe = true;
+            boolean safe;
              do {
+                 safe = true;
                  selection = r.nextInt(max);
                  selections[i] = selection;
                  for (int j = 0; j < i; j++) {
