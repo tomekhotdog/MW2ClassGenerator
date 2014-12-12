@@ -33,5 +33,13 @@ public class SecondaryWeapon extends LoadoutElement implements LoadoutItemInterf
     public String getName() {
         return name;
     }
+
+    public SecondaryWeaponType getType() {
+        return type;
+    }
+
+    public SecondaryAdditional getAdditional() {
+        return additional;
+    }
 }
 

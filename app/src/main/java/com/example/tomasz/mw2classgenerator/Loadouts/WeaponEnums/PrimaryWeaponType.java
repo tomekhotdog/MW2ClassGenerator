@@ -1,6 +1,9 @@
 package com.example.tomasz.mw2classgenerator.Loadouts.WeaponEnums;
 
+import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.PrimaryWeapon;
+
 import java.util.ArrayList;
+import java.util.Random;
 
 public enum PrimaryWeaponType {
     ASSAULT, SMG, LMG, SNIPER, RIOT;
@@ -57,5 +60,18 @@ public enum PrimaryWeaponType {
             default:
         }
         return ats;
+    }
+
+    public WeaponAttachments getWeaponAttachment1(PrimaryWeapon p) {
+        ArrayList<WeaponAttachments> was = getAttachments(p.getType());
+        int size = was.size();
+        Random r = new Random();
+        int selection = r.nextInt(size);
+        return was.get(selection);
+    }
+
+    public WeaponAttachments getWeaponAttachment2(PrimaryWeapon p, WeaponAttachments wa1) {
+        //TODO: implement bling perk combination rules...
+        return null;
     }
 }

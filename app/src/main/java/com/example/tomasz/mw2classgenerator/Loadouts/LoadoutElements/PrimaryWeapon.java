@@ -29,4 +29,8 @@ public class PrimaryWeapon extends LoadoutElement implements LoadoutItemInterfac
     public int getImageResource() {
         return imageResource;
     }
+
+    public PrimaryWeaponType getType() {
+        return type;
+    }
 }

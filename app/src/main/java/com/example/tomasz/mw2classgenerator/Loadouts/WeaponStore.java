@@ -13,6 +13,7 @@ import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.SpecialGren
 import com.example.tomasz.mw2classgenerator.Loadouts.WeaponEnums.PrimaryWeaponType;
 import com.example.tomasz.mw2classgenerator.Loadouts.WeaponEnums.SecondaryAdditional;
 import com.example.tomasz.mw2classgenerator.Loadouts.WeaponEnums.SecondaryWeaponType;
+import com.example.tomasz.mw2classgenerator.Loadouts.WeaponEnums.WeaponAttachments;
 import com.example.tomasz.mw2classgenerator.R;
 
 import java.util.ArrayList;
@@ -46,6 +47,8 @@ public class WeaponStore {
     }
 
     public KillstreakLoadout getKillstreakLoadout() {
+        //TODO: can't have killstreaks of same number value,etc
+
         int[] selections = getDistinctNumbers(3, killStreaks.size());
         KillStreak k1 = (KillStreak) killStreaks.get(selections[0]);
         KillStreak k2 = (KillStreak) killStreaks.get(selections[1]);
@@ -74,6 +77,26 @@ public class WeaponStore {
         return (SpecialGrenade) getRandomElement(specialGrenades);
     }
 
+    public WeaponAttachments getPrimaryAttachment1(PrimaryWeapon p) {
+        return p.getType().getWeaponAttachment1(p);
+    }
+
+    //Returns null when 2nd attachment is not applicable, i.e. when Perk1 is not 'Bling'
+    public WeaponAttachments getPrimaryAttachment2(PrimaryWeapon p, WeaponAttachments wa1, Perk perk) {
+        if (perk.getName().equalsIgnoreCase("Bling")) {
+            return p.getType().getWeaponAttachment2(p, wa1);
+        } else {
+            return null; //caller should expect null for when 2nd attachment is not possible
+        }
+    }
+
+    public WeaponAttachments getSecondaryAttachment1(SecondaryWeapon p) {
+        return p.getType().getWeaponAttachment1(p);
+    }
+
+    public WeaponAttachments getSecondaryAttachment2(SecondaryWeapon p, WeaponAttachments wa1) {
+        return p.getType().getWeaponAttachment2(p, wa1);
+    }
 
     private LoadoutItemInterface getRandomElement(ArrayList<LoadoutElement> loadoutItemArray) {
         int size = loadoutItemArray.size();
@@ -203,8 +226,10 @@ public class WeaponStore {
         killStreaks.add(new KillStreak("Predator Missile", R.drawable.predatormisile, 5));
         killStreaks.add(new KillStreak("Precision Airstrike", R.drawable.precisionairtstrike, 6));
         killStreaks.add(new KillStreak("Harrier Striker", R.drawable.harrierstrike, 7));
+        killStreaks.add(new KillStreak("Attack Helicopter", R.drawable.attackhelicopter, 7));
         killStreaks.add(new KillStreak("Emergency Airdrop", R.drawable.emergencyairdrop, 8));
         killStreaks.add(new KillStreak("Pave Low", R.drawable.pavelow, 9));
+        killStreaks.add(new KillStreak("Stealth Bomber", R.drawable.stealthbomber, 9));
         killStreaks.add(new KillStreak("Chopper Gunner", R.drawable.choppergunner, 11));
         killStreaks.add(new KillStreak("AC130", R.drawable.ac130, 11));
         killStreaks.add(new KillStreak("EMP", R.drawable.emp, 15));

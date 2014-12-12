@@ -8,6 +8,7 @@ import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.PerkLoadout
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.PrimaryWeapon;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.SecondaryWeapon;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.SpecialGrenade;
+import com.example.tomasz.mw2classgenerator.Loadouts.WeaponEnums.WeaponAttachments;
 import com.example.tomasz.mw2classgenerator.Loadouts.WeaponStore;
 
 import junit.framework.TestCase;
@@ -51,6 +52,14 @@ public class WeaponStoreLogic extends TestCase {
         assertNotNull(s);
         assertNotNull(e);
         assertNotNull(sp);
+    }
+
+    public void testCanSelectAttachments() {
+        WeaponAttachments p1 = ws.getPrimaryAttachment1(ws.getPrimaryWeapon());
+        WeaponAttachments s1 = ws.getSecondaryAttachment1(ws.getSecondaryWeapon());
+
+        assertNotNull(p1);
+        assertNotNull(s1);
     }
 
 }

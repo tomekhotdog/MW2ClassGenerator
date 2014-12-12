@@ -3,6 +3,7 @@ package com.example.tomasz.mw2classgenerator.Activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -101,8 +102,27 @@ public class LoadoutActivity extends Activity {
         k3Kills.setText(String.valueOf(loadout.getKillstreakLoadout().getKillStreak(3).getKillsRequired()) + " Kills");
 
         primaryImg.setImageResource(loadout.getPrimaryWeapon().getImageResource());
-        //TODO:ATTACHMENTS!
+        primaryAttachment1.setImageResource(loadout.getPrimaryAttachment1().getImageResource());
+
+        if(loadout.getPrimaryAttachment2() != null) {
+            primaryAttachment2.setImageResource(loadout.getPrimaryAttachment2().getImageResource());
+        } else {
+            primaryAttachment2.setVisibility(View.GONE);
+        }
+
         secondaryImg.setImageResource(loadout.getSecondaryWeapon().getImageResource());
+
+        if(loadout.getSecondaryAttachment1() != null) {
+            secondaryAttachment1.setImageResource(loadout.getSecondaryAttachment1().getImageResource());
+        } else {
+            secondaryAttachment1.setVisibility(View.GONE);
+        }
+        if(loadout.getPrimaryAttachment2() != null) {
+            secondaryAttachment2.setImageResource(loadout.getSecondaryAttachment2().getImageResource());
+        } else {
+            secondaryAttachment2.setVisibility(View.GONE);
+        }
+
         perk1.setImageResource(loadout.getPerkLoadout().getPerk(1).getImageResource());
         perk2.setImageResource(loadout.getPerkLoadout().getPerk(2).getImageResource());
         perk3.setImageResource(loadout.getPerkLoadout().getPerk(3).getImageResource());
