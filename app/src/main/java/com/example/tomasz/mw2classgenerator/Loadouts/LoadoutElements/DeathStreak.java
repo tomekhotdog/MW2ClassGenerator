@@ -21,4 +21,9 @@ public class DeathStreak extends LoadoutElement implements LoadoutItemInterface 
     public int getImageResource() {
         return imageResource;
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
 }

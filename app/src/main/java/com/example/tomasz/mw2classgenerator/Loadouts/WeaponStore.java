@@ -3,7 +3,7 @@ package com.example.tomasz.mw2classgenerator.Loadouts;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.DeathStreak;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.Equipment;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.KillStreak;
-import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.KillstreamLoadout;
+import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.KillstreakLoadout;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.LoadoutElement;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.Perk;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.PerkLoadout;
@@ -20,6 +20,7 @@ import java.util.Random;
 
 public class WeaponStore {
 
+    private int level = 0;
     ArrayList<LoadoutElement> primaryWeapons;
     ArrayList<LoadoutElement> secondaryWeapons;
     ArrayList<LoadoutElement> equipment;
@@ -31,29 +32,50 @@ public class WeaponStore {
     ArrayList<LoadoutElement> killStreaks;
     Random r;
 
-    public WeaponStore() {
+    public WeaponStore(int level) {
         createWeapons();
         r  = new Random();
+        this.level = level;
     }
 
-    public PerkLoadout getPerkLoadout(int level) {
-        Perk perk1 = (Perk) getRandomElement(perk1s, level);
-        Perk perk2 = (Perk) getRandomElement(perk2s, level);
-        Perk perk3 = (Perk) getRandomElement(perk3s, level);
+    public PerkLoadout getPerkLoadout() {
+        Perk perk1 = (Perk) getRandomElement(perk1s);
+        Perk perk2 = (Perk) getRandomElement(perk2s);
+        Perk perk3 = (Perk) getRandomElement(perk3s);
         return new PerkLoadout(perk1, perk2, perk3);
     }
 
-    public KillstreamLoadout getKillstreakLoadout(int level) {
+    public KillstreakLoadout getKillstreakLoadout() {
         int[] selections = getDistinctNumbers(3, killStreaks.size());
-
         KillStreak k1 = (KillStreak) killStreaks.get(selections[0]);
         KillStreak k2 = (KillStreak) killStreaks.get(selections[1]);
         KillStreak k3 = (KillStreak) killStreaks.get(selections[2]);
 
-        return new KillstreamLoadout(k1, k2, k3);
+        return new KillstreakLoadout(k1, k2, k3);
     }
 
-    private LoadoutItemInterface getRandomElement(ArrayList<LoadoutElement> loadoutItemArray, int level) {
+    public DeathStreak getDeathStreak() {
+        return (DeathStreak) getRandomElement(deathStreaks);
+    }
+
+    public PrimaryWeapon getPrimaryWeapon() {
+        return (PrimaryWeapon) getRandomElement(primaryWeapons);
+    }
+
+    public SecondaryWeapon getSecondaryWeapon() {
+        return (SecondaryWeapon) getRandomElement(secondaryWeapons);
+    }
+
+    public Equipment getEquipment() {
+        return (Equipment) getRandomElement(equipment);
+    }
+
+    public SpecialGrenade getSpecialGrenade() {
+        return (SpecialGrenade) getRandomElement(specialGrenades);
+    }
+
+
+    private LoadoutItemInterface getRandomElement(ArrayList<LoadoutElement> loadoutItemArray) {
         int size = loadoutItemArray.size();
         int selection = r.nextInt(size);
         LoadoutItemInterface item = loadoutItemArray.get(selection);
@@ -137,6 +159,7 @@ public class WeaponStore {
         equipment.add(new Equipment("Blast Shield", 0, 19));
         equipment.add(new Equipment("Claymore", 0, 31));
         equipment.add(new Equipment("C4", 0, 43));
+        equipment.add(new Equipment("Unavailable", 0, 0));
 
         specialGrenades = new ArrayList<LoadoutElement>();
         specialGrenades.add(new SpecialGrenade("Flash Grenade", 0, 0));
@@ -148,6 +171,7 @@ public class WeaponStore {
         deathStreaks.add(new DeathStreak("Painkiller", R.drawable.painkiller, 6));
         deathStreaks.add(new DeathStreak("Martyrdom", R.drawable.martyrdom, 27));
         deathStreaks.add(new DeathStreak("Final Stand", R.drawable.finalstand, 39));
+        deathStreaks.add(new DeathStreak("Unavailable", 0, 0));
 
         perk1s = new ArrayList<LoadoutElement>();
         perk1s.add(new Perk("Marathon", 1, 0, R.drawable.marathon));
@@ -164,8 +188,8 @@ public class WeaponStore {
         perk2s.add(new Perk("Danger Close", 2, 33, R.drawable.dangerclose));
 
         perk3s = new ArrayList<LoadoutElement>();
-        perk3s.add(new Perk("Commando", 3, 1, R.drawable.commando));
-        perk3s.add(new Perk("Steady Aim", 3, 1, R.drawable.steadyaim));
+        perk3s.add(new Perk("Commando", 3, 0, R.drawable.commando));
+        perk3s.add(new Perk("Steady Aim", 3, 0, R.drawable.steadyaim));
         perk3s.add(new Perk("Scrambler", 3, 17, R.drawable.scrambler));
         perk3s.add(new Perk("Ninja", 3, 29, R.drawable.ninja));
         perk3s.add(new Perk("SitRep", 3, 37, R.drawable.sitrep));

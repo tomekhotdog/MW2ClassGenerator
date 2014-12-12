@@ -12,4 +12,17 @@ public class PerkLoadout {
         this.perk2 = p2;
         this.perk3 = p3;
     }
+
+    public Perk getPerk(int category) {
+        switch(category) {
+            case 1:
+                return perk1;
+            case 2:
+                return perk2;
+            case 3:
+                return perk3;
+            default:
+                return null;
+        }
+    }
 }

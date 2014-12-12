@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="bluegrey_50" type="color">#ECEFF1</item>
+    <item name="bluegrey_100" type="color">#CFD8DC</item>
+    <item name="bluegrey_200" type="color">#B0BEC5</item>
+    <item name="bluegrey_300" type="color">#90A4AE</item>
+    <item name="bluegrey_400" type="color">#78909C</item>
+    <item name="bluegrey_500" type="color">#607D8B</item>
+    <item name="bluegrey_600" type="color">#546E7A</item>
+    <item name="bluegrey_700" type="color">#455A64</item>
+    <item name="bluegrey_800" type="color">#37474F</item>
+    <item name="bluegrey_900" type="color">#263238</item>
+
+</resources>

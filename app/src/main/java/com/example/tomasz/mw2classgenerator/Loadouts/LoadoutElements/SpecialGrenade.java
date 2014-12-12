@@ -22,4 +22,9 @@ public class SpecialGrenade extends LoadoutElement implements LoadoutItemInterfa
     public int getImageResource() {
         return imageResource;
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
 }

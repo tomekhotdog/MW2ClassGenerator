@@ -28,5 +28,10 @@ public class SecondaryWeapon extends LoadoutElement implements LoadoutItemInterf
     public int getLevelUnlocked() {
         return levelUnlocked;
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
 }
 

@@ -22,4 +22,13 @@ public class Perk extends LoadoutElement implements LoadoutItemInterface {
     public int getLevelUnlocked() {
         return levelUnlocked;
     }
+
+    public int getCategory() {
+        return category;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
 }

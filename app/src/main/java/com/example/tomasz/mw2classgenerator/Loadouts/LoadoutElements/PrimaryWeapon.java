@@ -21,6 +21,11 @@ public class PrimaryWeapon extends LoadoutElement implements LoadoutItemInterfac
         return levelUnlocked;
     }
 
+    @Override
+    public String getName() {
+        return name;
+    }
+
     public int getImageResource() {
         return imageResource;
     }

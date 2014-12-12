@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/boarder_padding"
+    android:background="@color/bluegrey_900"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/MajorTitle"
+        android:background="@color/bluegrey_800"
+        android:text="@string/app_name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            style="@style/SubHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/primary"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/primary_weapon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/major_text"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:id="@+id/primary_weapon_img"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="3"
+            android:src="@drawable/f2000"/>
+
+        <ImageView
+            android:id="@+id/primary_weapon_attachment_1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/silencer"/>
+
+        <ImageView
+            android:id="@+id/primary_weapon_attachment_2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/fmj"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            style="@style/SubHeading"
+            android:layout_width="0dp"
+            android:text="@string/secondary"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            style="st"
+            android:id="@+id/secondary_weapon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/major_text"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:id="@+id/secondary_weapon_img"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="3"
+            android:src="@drawable/m9"/>
+
+        <ImageView
+            android:id="@+id/secondary_weapon_attachment_1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/silencer"/>
+
+        <ImageView
+            android:id="@+id/secondary_weapon_attachment_2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/fmj"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:textSize="@dimen/major_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/equipment"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:textSize="@dimen/major_text"
+            android:id="@+id/equipment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:textSize="@dimen/major_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/special"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/special"
+            android:textSize="@dimen/major_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:textSize="@dimen/major_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/deathstreak"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/deathstreak"
+            android:textSize="@dimen/major_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/Heading"
+        android:padding="@dimen/normal_padding"
+        android:id="@+id/perks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/perks"
+        android:background="@color/bluegrey_800"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:id="@+id/perk1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/perk_height"
+            android:layout_weight="1"
+            android:src="@drawable/marathon"/>
+
+        <ImageView
+            android:id="@+id/perk2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/perk_height"
+            android:layout_weight="1"
+            android:src="@drawable/stoppingpower"/>
+
+        <ImageView
+            android:id="@+id/perk3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/perk_height"
+            android:layout_weight="1"
+            android:src="@drawable/ninja"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/Heading"
+        android:padding="@dimen/normal_padding"
+        android:id="@+id/killstreaks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/killstreaks"
+        android:background="@color/bluegrey_800"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="@dimen/normal_padding">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ks_1_img"
+                android:layout_width="@dimen/perk_height"
+                android:layout_height="@dimen/perk_height"
+                android:src="@drawable/uav"/>
+
+            <TextView
+                android:id="@+id/ks_1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special"
+                android:textSize="@dimen/minor_text"
+                android:padding="@dimen/small_padding"/>
+
+            <TextView
+                android:id="@+id/ks_1_kills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special"
+                android:textSize="@dimen/minor_text"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/ks_2_img"
+                android:layout_width="@dimen/perk_height"
+                android:layout_height="@dimen/perk_height"
+                android:src="@drawable/predatormisile"/>
+
+            <TextView
+                android:id="@+id/ks_2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special"
+                android:textSize="@dimen/minor_text"
+                android:padding="@dimen/small_padding"/>
+
+            <TextView
+                android:id="@+id/ks_2_kills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special"
+                android:textSize="@dimen/minor_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/ks_3_img"
+                android:layout_width="@dimen/perk_height"
+                android:layout_height="@dimen/perk_height"
+                android:src="@drawable/harrierstrike"/>
+
+            <TextView
+                android:id="@+id/ks_3_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special"
+                android:textSize="@dimen/minor_text"
+                android:padding="@dimen/small_padding"/>
+
+            <TextView
+                android:id="@+id/ks_3_kills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special"
+                android:textSize="@dimen/minor_text"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
