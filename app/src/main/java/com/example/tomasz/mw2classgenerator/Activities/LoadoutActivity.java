@@ -9,7 +9,8 @@ import android.widget.TextView;
 
 import com.example.tomasz.mw2classgenerator.Constants;
 import com.example.tomasz.mw2classgenerator.Loadouts.Loadout;
-import com.example.tomasz.mw2classgenerator.Loadouts.WeaponStore;
+import com.example.tomasz.mw2classgenerator.Loadouts.WeaponStores.AttackingWeaponStore;
+import com.example.tomasz.mw2classgenerator.Loadouts.WeaponStores.WeaponStore;
 import com.example.tomasz.mw2classgenerator.R;
 
 
@@ -54,7 +55,7 @@ public class LoadoutActivity extends Activity {
 
         getViews();
 
-        loadout = new Loadout(new WeaponStore(level));
+        loadout = new Loadout(new AttackingWeaponStore(level));
         applyLoadout();
 
     }

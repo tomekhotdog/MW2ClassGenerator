@@ -9,6 +9,7 @@ import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.PrimaryWeap
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.SecondaryWeapon;
 import com.example.tomasz.mw2classgenerator.Loadouts.LoadoutElements.SpecialGrenade;
 import com.example.tomasz.mw2classgenerator.Loadouts.WeaponEnums.WeaponAttachments;
+import com.example.tomasz.mw2classgenerator.Loadouts.WeaponStores.WeaponStore;
 
 public class Loadout {
 
