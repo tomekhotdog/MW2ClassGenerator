@@ -10,4 +10,7 @@ public class Constants {
     public final static int TYPE_RANDOM = 100;
     public final static int TYPE_AGGRESSIVE = 101;
     public final static int TYPE_DEFENSIVE = 102;
+    public final static int TYPE_WACKY = 103;
+
+    public final static String CURRENT_FRAGMENT = "CURRENT_FRAGMENT";
 }

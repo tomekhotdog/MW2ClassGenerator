@@ -9,11 +9,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
-
     <string name="random_loadout">Random Class</string>
     <string name="aggressive_loadout">Aggressive Class</string>
     <string name="defensive_loadout">Defensive Class</string>
-
+    <string name="wacky_loadout">Wacky Class</string>
     <string name="primary">Primary</string>
     <string name="secondary">Secondary</string>
     <string name="equipment">Equipment</string>
@@ -21,6 +20,7 @@
     <string name="deathstreak">Deathstreak</string>
     <string name="perks">Perks</string>
     <string name="killstreaks">Killstreaks</string>
-
     <string name="randomise">Randomise</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
